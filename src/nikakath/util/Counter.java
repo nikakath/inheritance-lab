@@ -9,9 +9,9 @@ public class Counter {
         PrintWriter pen = new PrintWriter(System.out, true);
 
         // Set up some counters
-        Counter alpha = new Counter(0);
+        NamedCounter alpha = new NamedCounter("alpha", 0);
         Counter beta = new Counter(123);
-        Counter gamma = new Counter(-5);
+        DecrementableCounter gamma = new DecrementableCounter(-5);
 
         // Print original values
         pen.println("Original alpha = " + alpha);
@@ -28,6 +28,7 @@ public class Counter {
 
         // And we're done
         pen.close();
+        
     } // main(String[])
 	
 	int count;
